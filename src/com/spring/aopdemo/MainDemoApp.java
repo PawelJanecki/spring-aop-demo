@@ -19,10 +19,12 @@ public class MainDemoApp {
         MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 
         // call the business method
-        accountDAO.addAccount();
+        accountDAO.addAccount(new Account(), true);
+        accountDAO.doWork();
 
         // call the membership business method
         membershipDAO.addSillyMember();
+        membershipDAO.goToSleep();
 
         // close the context
         context.close();
