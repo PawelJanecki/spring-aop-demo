@@ -22,7 +22,7 @@ public class MainDemoApp {
         accountDAO.addAccount();
 
         // call the membership business method
-        membershipDAO.addAccount();
+        membershipDAO.addSillyMember();
 
         // close the context
         context.close();
